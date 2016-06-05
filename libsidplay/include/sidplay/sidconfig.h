@@ -15,7 +15,10 @@
  *                                                                         *
  ***************************************************************************/
 /***************************************************************************
- *  $Log: not supported by cvs2svn $
+ *  $Log: sidconfig.h,v $
+ *  Revision 1.5  2001/12/07 00:40:22  s_a_white
+ *  Windows fixes.
+ *
  *  Revision 1.4  2001/12/05 23:37:39  s_a_white
  *  Now redirects to real sidfig.hy/i
  *

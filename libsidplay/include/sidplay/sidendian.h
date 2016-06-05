@@ -15,7 +15,10 @@
  *                                                                         *
  ***************************************************************************/
 /***************************************************************************
- *  $Log: not supported by cvs2svn $
+ *  $Log: sidendian.h,v $
+ *  Revision 1.5  2001/07/03 22:44:13  s_a_white
+ *  Added endian_16 to convert a 16 bit value to an array of 8s.
+ *
  *  Revision 1.4  2001/05/07 16:27:24  s_a_white
  *  Fix optimisation issues with gcc 2.96.
  *
