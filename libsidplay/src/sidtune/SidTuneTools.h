@@ -40,13 +40,13 @@
 #if defined(HAVE_STRCASECMP)
 #   define MYSTRICMP strcasecmp
 #else
-#   define MYSTRICMP stricmp
+#   define MYSTRICMP _stricmp
 #endif
 
 #if defined(HAVE_STRNCASECMP)
 #   define MYSTRNICMP strncasecmp
 #else
-#   define MYSTRNICMP strnicmp
+#   define MYSTRNICMP _strnicmp
 #endif
 
 class SidTuneTools
