@@ -124,171 +124,72 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>lib$(ProjectName)d</TargetName>
+    <TargetName>lib$(ProjectName)2d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>lib$(ProjectName)d</TargetName>
+    <TargetName>lib$(ProjectName)2d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>lib$(ProjectName)</TargetName>
+    <TargetName>lib$(ProjectName)2</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>lib$(ProjectName)</TargetName>
+    <TargetName>lib$(ProjectName)2</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
-    <TargetName>$(ProjectName)d</TargetName>
+    <TargetName>$(ProjectName)2d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
-    <TargetName>$(ProjectName)d</TargetName>
+    <TargetName>$(ProjectName)2d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
-    <TargetName>$(ProjectName)</TargetName>
+    <TargetName>$(ProjectName)2</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
-    <TargetName>$(ProjectName)</TargetName>
+    <TargetName>$(ProjectName)2</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
     <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-
-    </ClCompile>
-    <Lib>
-      <TargetMachine>MachineX86</TargetMachine>
-      <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-
-    </ClCompile>
-    <Lib>
-      <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
-    <Bscmake>
-      <PreserveSbr>true</PreserveSbr>
-    </Bscmake>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
-    <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;DLL_EXPORT;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(OutDir)..\..\bin\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-
-    </ClCompile>
-    <Link>
-      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
-    <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;DLL_EXPORT;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader />
-      <ProgramDataBaseFileName>$(OutDir)..\..\bin\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-
-    </ClCompile>
-    <Link>
-      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;_DEBUG;DEBUG;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader />
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
       <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-
     </ClCompile>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
@@ -300,19 +201,76 @@
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;_DEBUG;DEBUG;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader />
       <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Lib>
       <SubSystem>Windows</SubSystem>
@@ -323,51 +281,575 @@
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;_DEBUG;DEBUG;DLL_EXPORT;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader />
       <ProgramDataBaseFileName>$(OutDir)..\..\bin\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
-      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;_DEBUG;DEBUG;DLL_EXPORT;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader />
       <ProgramDataBaseFileName>$(OutDir)..\..\bin\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
-      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;DLL_EXPORT;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)..\..\bin\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\libsidplay\include;$(ProjectDir)..\..\libsidplay\include\sidplay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;WIN32;NDEBUG;DLL_EXPORT;HAVE_MSWINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ProgramDataBaseFileName>$(OutDir)..\..\bin\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+FOR %%H IN (sidconfig.h sidint.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!"
+  )
+)
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidconfig.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!" (
+    DEL /f /q "$(OutDir)..\..\include\$(ProjectName)\!_HEADER!"
+  )
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF NOT EXIST "$(OutDir)..\..\include" (
+  MKDIR "$(OutDir)..\..\include"
+)
+
+IF NOT EXIST "$(OutDir)..\..\include\$(ProjectName)" (
+  MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+COPY "$(ProjectDir)sidconfig.h " "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (Buffer.h c64env.h component.h event.h sid2types.h sidbuilder.h sidendian.h sidint.h sidplay2.h SidTune.h sidtypes.h sidusage.h SmartPtr.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)..\..\libsidplay\include\sidplay\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+IF NOT EXIST "$(OutDir)..\..\licenses" (
+  MKDIR "$(OutDir)..\..\licenses"
+)
+
+COPY "$(ProjectDir)..\..\libsidplay\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\libsidplay\src\config.cpp" />
@@ -393,7 +875,6 @@
     <ClCompile Include="..\..\libsidplay\src\xsid\xsid.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\libsidplay\include\config.h" />
     <ClInclude Include="..\..\libsidplay\include\sidenv.h" />
     <ClInclude Include="..\..\libsidplay\include\sidplay\Buffer.h" />
     <ClInclude Include="..\..\libsidplay\include\sidplay\c64env.h" />
@@ -401,7 +882,6 @@
     <ClInclude Include="..\..\libsidplay\include\sidplay\event.h" />
     <ClInclude Include="..\..\libsidplay\include\sidplay\sid2types.h" />
     <ClInclude Include="..\..\libsidplay\include\sidplay\sidbuilder.h" />
-    <ClInclude Include="..\..\libsidplay\include\sidplay\sidconfig.h" />
     <ClInclude Include="..\..\libsidplay\include\sidplay\sidendian.h" />
     <ClInclude Include="..\..\libsidplay\include\sidplay\sidplay2.h" />
     <ClInclude Include="..\..\libsidplay\include\sidplay\SidTune.h" />
@@ -428,6 +908,7 @@
     <ClInclude Include="..\..\libsidplay\src\xsid\xsid.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="sidconfig.h" />
+    <ClInclude Include="sidint.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\libsidplay\src\char.bin" />
