@@ -670,7 +670,7 @@ bool SidTune::createNewFileName(Buffer_sidtt<char>& destString,
                                 const char* sourceExt)
 {
     Buffer_sidtt<char> newBuf;
-    size_t newLen = strlen(sourceName)+strlen(sourceExt)+1;
+    uint_least32_t newLen = strlen(sourceName)+strlen(sourceExt)+1;
     // Get enough memory, so we can appended the extension.
 #ifdef HAVE_EXCEPTIONS
     newBuf.assign(new(std::nothrow) char[newLen],newLen);
