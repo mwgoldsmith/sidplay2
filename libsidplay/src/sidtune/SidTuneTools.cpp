@@ -88,7 +88,7 @@ char* SidTuneTools::slashedFileNameWithoutPath(char* s)
 char* SidTuneTools::fileExtOfPath(char* s)
 {
     size_t last_dot_pos = strlen(s);  // assume no dot and append
-    for ( int pos = last_dot_pos; pos >= 0; --pos )
+    for (size_t pos = last_dot_pos; pos >= 0; --pos )
     {
         if ( s[pos] == '.' )
         {

@@ -13,6 +13,8 @@
 #   define HAVE_EXCEPTIONS
 #endif
 
+#define HAVE_IOS_OPENMODE
+
 /* Define if you support file names longer than 14 characters.  */
 #define HAVE_LONG_FILE_NAMES
 
