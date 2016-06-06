@@ -58,7 +58,7 @@ const int SIDTUNE_COMPATIBILITY_BASIC = 0x03; // File requires C64 Basic
 
 
 // Required to export template
-#ifndef _SidTune_cpp_
+#if !defined(_SidTune_cpp_) && !defined(_MSC_VER)
 extern
 #endif
 template class SID_EXTERN Buffer_sidtt<const uint_least8_t>;
